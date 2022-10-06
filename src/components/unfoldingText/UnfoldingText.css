@@ -1,0 +1,43 @@
+.unfoldingContainer{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    margin-top: 20px;
+}
+
+.unfoldingTitle {
+    color: white;
+    background-color: #FF6060;
+    padding-left: 0.5em;
+    line-height: 1.5em;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.unfoldingDescription {
+    color: #FF6060;
+    background-color: #F6F6F6;
+    font-size: 18px;
+    margin-top: -3px;
+    padding: 6px 0 1em 0.5em;
+}
+
+p {
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .unfoldingDescription{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .unfoldingDescription{
+        font-size: 12px;
+    }
+
+    .unfoldingContainer{
+        width: 100%;
+    }
+}

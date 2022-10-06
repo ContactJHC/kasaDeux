@@ -1,0 +1,20 @@
+#containerDescription {
+    display: flex;
+    justify-content: space-around;
+}
+
+#containerOne, #containerTwo {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    #containerOne, #containerTwo {
+        margin-top: -10px;
+    }
+
+    #containerDescription {
+        flex-direction: column;
+    }
+
+
+}
