@@ -13,6 +13,7 @@
 }
 
 .kasa-nav {
+    cursor: pointer;
     margin-right: 2em;
     color: #FF6060;
 }

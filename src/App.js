@@ -1,8 +1,5 @@
-
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
-// import Location from './pages/location/Location';
-import Home from './pages/home/Home';
+import { useRoutes } from 'react-router-dom';
+import { routes } from './Roots';
 
 
 function App() {
@@ -23,22 +20,11 @@ function App() {
   //   content : "La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
   // }
 
+  let contenu = useRoutes(routes)
+
   return (
     <>
-      <Header />
-      <main>
-        {/* <Location /> */}
-        <Home />
-        {/* <BannerTwo /> */}
-        {/* <UnfoldingText reliability={reliabilitySection} />
-        <UnfoldingText reliability={respectSection} />
-        <UnfoldingText reliability={serviceSection} />
-        <UnfoldingText reliability={safetySection} /> */}
-        {/* <Banner /> */}
-        {/* <NotFound /> */}
-        {/* <IndexCards /> */}
-      </main>
-      <Footer />
+      {contenu}
     </>
   );
 }

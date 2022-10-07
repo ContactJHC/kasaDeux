@@ -3,16 +3,13 @@ import LocationHeader from '../../components/locationHeader/LocationHeader'
 import UnfoldingText from '../../components/unfoldingText/UnfoldingText'
 import Carousel from '../../components/carousel/Carousel'
 import data from '../../logements.json'
-
+import { useParams } from 'react-router-dom'
 
 function Location() {
-    let picturesdata = []
-    data[5].pictures.forEach((unePhotoUnLieu) => {
-      picturesdata.push(unePhotoUnLieu)
-    })
-  
-    const oneLocData = data[5]
-  
+    
+    const identifiant = useParams()
+    const oneLocId = identifiant.id
+    const oneLocData = data.filter((obj)=> obj.id === oneLocId)[0]
     const descriptionSection = {
       title : 'Description',
       content : oneLocData.description
@@ -28,6 +25,9 @@ function Location() {
         content : liEquipments
     }
 
+  
+
+
     function Description() {
         return (
             <div id='containerDescription'>
@@ -35,7 +35,7 @@ function Location() {
                     <UnfoldingText reliability={descriptionSection} />
                 </div>
                 <div id='containerTwo'>
-                    <UnfoldingText reliability={equipementSection} />
+                    <UnfoldingText reliability={equipementSection} /> 
                 </div>
             </div>
         )
@@ -43,7 +43,7 @@ function Location() {
 
     return (
         <>
-            <Carousel picturesData={picturesdata} />
+            <Carousel picturesData={oneLocData.pictures} />
             <LocationHeader oneLocationData={oneLocData} />
             <Description />
         </>
