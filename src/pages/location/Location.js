@@ -15,18 +15,10 @@ function Location() {
       content : oneLocData.description
     }
 
-    let liEquipments = ''
-    oneLocData.equipments.forEach((equipment) => {
-        liEquipments = liEquipments + ' ' + equipment
-    })
-
     const equipementSection = {
         title: 'Équipements',
-        content : liEquipments
+        content : oneLocData.equipments
     }
-
-  
-
 
     function Description() {
         return (

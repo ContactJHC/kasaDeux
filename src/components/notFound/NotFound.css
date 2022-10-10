@@ -8,11 +8,11 @@
     font-size: 288px;
     font-weight: bold;
     line-height: 0;
+    margin-top: 1em;
 }
 
 #texteDeNotFetch {
     font-size: 36px;
-    margin-top: -2em;
     margin-bottom: 5em;
 }
 

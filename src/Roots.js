@@ -3,7 +3,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import Location from "./pages/location/Location";
 import NotFound from "./components/notFound/NotFound"
-import UnfoldingText from "./components/unfoldingText/UnfoldingText";
+import APropos from "./pages/aPropos/APropos";
 import { Outlet } from "react-router-dom";
 
 export const routes =
@@ -20,9 +20,13 @@ export const routes =
           path: "fiche-logement/:id",
           element: <Location />,
         },
+        { 
+          path: "fiche-logement/*", 
+          element: <NotFound /> 
+        },
         {
           path: "apropos",
-          element: <UnfoldingText />,
+          element: <APropos />,
         },
         { 
             path: "*", 
