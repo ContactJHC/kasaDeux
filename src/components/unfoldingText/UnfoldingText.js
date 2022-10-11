@@ -17,10 +17,10 @@ function UnfoldingText({reliability}) {
             </ul>
         )
     }
-let content = reliability.content
-if (Array.isArray(reliability.content)) {
-    content = testArray(reliability.content)
-}
+    let content = reliability.content
+    if (Array.isArray(reliability.content)) {
+        content = testArray(reliability.content)
+    }
     return (
         <div className='unfoldingContainer'>
             <img src={vectorDown} className={enabled ? 'vector vDown disabled' : 'vector vDown enabled'} alt='flèche vers le bas' onClick={e => setEnabled(!enabled)}/>

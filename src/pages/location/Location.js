@@ -2,11 +2,11 @@ import './Location.css'
 import LocationHeader from '../../components/locationHeader/LocationHeader'
 import UnfoldingText from '../../components/unfoldingText/UnfoldingText'
 import Carousel from '../../components/carousel/Carousel'
-import data from '../../logements.json'
+import getData from '../../services/Services'
 import { useParams } from 'react-router-dom'
 
 function Location() {
-    
+    const data = getData()
     const identifiant = useParams()
     const oneLocId = identifiant.id
     const oneLocData = data.filter((obj)=> obj.id === oneLocId)[0]

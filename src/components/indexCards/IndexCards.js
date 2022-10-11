@@ -1,10 +1,10 @@
 import './IndexCards.css'
-import data from '../../logements.json'
+import getData from '../../services/Services'
 import { Link } from 'react-router-dom'
 
 
 function IndexCards() {
-
+    const data = getData()
     function cardsFactory(titre, photo, id) {
         let routeId = '/fiche-logement/'+ id
         return (

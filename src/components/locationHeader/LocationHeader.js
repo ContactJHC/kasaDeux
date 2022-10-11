@@ -1,8 +1,11 @@
 import './LocationHeader.css'
 import Tag from '../tags/Tags'
+import { FaStar } from 'react-icons/fa'
 
 
 function LocationHeader({oneLocationData}) {
+
+    const starNumber = parseInt(oneLocationData.rating, 10)
     return (
         <div id='locHeaderContainer'>
             <div id='namePlaceTags'>
@@ -28,7 +31,14 @@ function LocationHeader({oneLocationData}) {
                     </div>
                 </div>
                 <div id='rating'>
-                    {oneLocationData.rating}
+                    {[...Array(starNumber)].map(() => {
+                        return <FaStar />
+                    })}
+                    {(oneLocationData.rating !==5) && (
+                        [...Array(5-starNumber)].map(() => {
+                            return <FaStar fill='#E3E3E3'/>
+                        })
+                    )}
                 </div>
             </div>
         </div>
