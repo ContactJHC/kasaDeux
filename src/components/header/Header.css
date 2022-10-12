@@ -16,6 +16,17 @@
     cursor: pointer;
     margin-right: 2em;
     color: #FF6060;
+
+    
+
+}
+
+.active-nav {
+    text-decoration: underline;
+}
+
+.not-active-nav {
+    text-decoration: none;
 }
 
 @media (max-width: 992px) {

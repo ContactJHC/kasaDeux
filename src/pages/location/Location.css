@@ -5,7 +5,17 @@
 
 #containerOne, #containerTwo {
     flex: 1;
+    height: auto;
+    margin-bottom: 30px;
     
+}
+
+#containerOne .unfoldingContainer, #containerTwo .unfoldingContainer{
+    height: 100%;
+}
+
+#containerOne .unfoldingDescription, #containerTwo .unfoldingDescription{
+    height: 70%;
 }
 
 #containerTwo ul {

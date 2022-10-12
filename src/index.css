@@ -10,6 +10,8 @@ body {
 
 main {
   padding: 20px;
+  min-height: 100vh;
+  height: fit-content;
 }
 
 /* @media (max-width: 540px) {
