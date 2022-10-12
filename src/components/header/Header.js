@@ -9,9 +9,9 @@ function Header() {
             <nav id='kasa-nav'>
                 <NavLink 
                     to="/" 
-                    exact
-                    activeClassName='kasa-nav active-nav'
-                    className='kasa-nav'
+                    end
+                    className={({ isActive }) => 
+                      (isActive ? "kasa-nav active-nav" : "kasa-nav not-active-nav")}
                     id='kasa-nav-accueil'>
                         Accueil
                 </NavLink>
@@ -19,8 +19,6 @@ function Header() {
                     to="/apropos"
                     className={({ isActive }) => 
                       (isActive ? "kasa-nav active-nav" : "kasa-nav not-active-nav")}
-                    // activeClassName='kasa-nav active-nav'
-                    // className='kasa-nav'
                     id='kasa-nav-apropos'>
                         À propos
                 </NavLink>
