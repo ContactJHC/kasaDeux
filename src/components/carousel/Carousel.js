@@ -30,8 +30,12 @@ function Carousel({picturesData}) {
 
     return (
         <section id='carouselContainer'>
-            <img src={arrowBack} alt='arrow back' id='arrBack' onClick={prevSlide}/>
-            <img src={arrowForward} alt='arrow forward' id='arrForw' onClick={nextSlide}/>
+            {length !== 1 && (
+            <>
+                <img src={arrowBack} alt='arrow back' id='arrBack' onClick={prevSlide}/>
+                <img src={arrowForward} alt='arrow forward' id='arrForw' onClick={nextSlide}/>
+            </>
+            )}
             {picturesData.map((picture,ind) => {
                 return (
                     <div className= {index === ind ? 'active' : 'inactive'} key = {ind}>
