@@ -32,12 +32,22 @@ function Carousel({picturesData}) {
                 return (
                     <div className= {index === ind ? 'active' : 'inactive'} key = {ind}>
                     {ind===index && (
-                        <img src={picture} alt='photographie du logement' className='visiblePicture' />
+                        <div className='visiblePicture' style = {{
+                            backgroundImage: `url(${picture})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center center',
+                            backgroundRepeat: 'no-repeat',
+                            width: '100%',
+                            minHeight: '415px'
+                    }}>
+                        </div>
+                    // <img src={picture} alt='photographie du logement' className='visiblePicture' />
+                        
                     )}
                     </div>
                 )
             })}
-
+            
             {/* <img src={picturesData[0]} alt='test' className='visiblePicture' /> */}
         </section>
     )

@@ -1,6 +1,5 @@
 #carouselContainer {
-    width: fit-content;
-    max-height: 800px;
+    height: 415px;
     position: relative;
     overflow: hidden;
     border-radius: 25px;
@@ -9,9 +8,6 @@
 }
 
 .visiblePicture {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
     border-radius: 25px;
 }
 
@@ -20,7 +16,7 @@
     z-index: 2;
     cursor: pointer;
     user-select: none;
-    top: 350px;
+    top: 147.5px;
 }
 
 #arrBack {
@@ -42,13 +38,10 @@
 
 @media (max-width: 768px) {
 
-    .visiblePicture {
-        object-fit: fill;
-    }
 
     #carouselContainer {
         width: 100%;
-        height: auto;
+        height: 255px;
         margin-bottom: 10px;
     }
 
