@@ -8,9 +8,9 @@ function IndexCards() {
     function cardsFactory(titre, photo, id) {
         let routeId = '/fiche-logement/'+ id
         return (
-            <Link to={routeId} className='card'>
+            <Link to={routeId} className='card' key={id}>
                 <p>{titre}</p>
-                <img className='coverPicture'src={photo} alt='bien à louer' />
+                <img className='coverPicture' src={photo} alt='bien à louer' />
             </Link>
         )
     }
