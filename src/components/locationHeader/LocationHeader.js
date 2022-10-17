@@ -16,9 +16,9 @@ function LocationHeader({oneLocationData}) {
                     {oneLocationData.location}
                 </div>
                 <div id='tags'>
-                    {oneLocationData.tags.map((tag) => {
+                    {oneLocationData.tags.map((tag,indic) => {
                         return (
-                            <Tag tagData={tag} key={tag.ind}/>
+                            <Tag tagData={tag} key={`tag${tag}${indic}`}/>
                         )
                     })}
                 </div>
@@ -31,12 +31,12 @@ function LocationHeader({oneLocationData}) {
                     </div>
                 </div>
                 <div id='rating'>
-                    {[...Array(starNumber)].map(() => {
-                        return <FaStar />
+                    {[...Array(starNumber)].map((elem,indx) => {
+                        return <FaStar key={`starRate${elem}${indx}`}/>
                     })}
                     {(oneLocationData.rating !==5) && (
-                        [...Array(5-starNumber)].map(() => {
-                            return <FaStar fill='#E3E3E3'/>
+                        [...Array(5-starNumber)].map((elem,indx) => {
+                            return <FaStar fill='#E3E3E3' key={`starRate${elem}${indx}`}/>
                         })
                     )}
                 </div>

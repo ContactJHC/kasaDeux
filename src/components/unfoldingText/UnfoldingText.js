@@ -13,7 +13,7 @@ function UnfoldingText({reliability}) {
     const testArray = (content) => {
         return (
             <ul>
-                {content.map(e => <li>{e}</li>)}
+                {content.map((e, i) => <li key={`li ${e}${i}`}>{e}</li>)}
             </ul>
         )
     }
@@ -30,7 +30,7 @@ function UnfoldingText({reliability}) {
             </div>
             {enabled && (
                 <div className='unfoldingDescription' >
-                    <p>{content}</p>
+                    {content}
                 </div>
             )}
             
