@@ -7,20 +7,24 @@ import './Carousel.css'
 function Carousel({picturesData}) {
     let [index, setIndex] = useState(0)
     const length = picturesData.length
+    // const [length, setLength] = useState(picturesData.length)
+    // useEffect(()=>{ setLength(picturesData.length)}, [picturesData])
 
     function nextSlide() {
+        // setLength(picturesData.length)
         if (index === length -1) {
             setIndex(0)
         } else {
-            setIndex(index++)
+            setIndex(index+1)
         }
     }
 
     function prevSlide() {
+        // setLength(picturesData.length)
         if (index === 0) {
             setIndex(length-1)
         } else {
-            setIndex(index--)
+            setIndex(index-1)
         }
     }
 
