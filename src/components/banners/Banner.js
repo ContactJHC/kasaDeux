@@ -1,7 +1,6 @@
-import './styles/Banner.css'
-import coverBanner from '../../assets/coverBanner.png'
+import './Banner.css'
 
-function Banner() {
+function Banner({coverBanner}) {
     return (
         <div id='bannerContainer'>
             <img src={coverBanner} alt='landscape banner' id='bannerPicture' />

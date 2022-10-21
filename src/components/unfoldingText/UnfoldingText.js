@@ -10,7 +10,7 @@ function UnfoldingText({reliability}) {
 
     const [enabled, setEnabled] = useState(false)
 
-    const testArray = (content) => {
+    const listCreation = (content) => {
         return (
             <ul>
                 {content.map((e, i) => <li key={`li ${e}${i}`}>{e}</li>)}
@@ -19,7 +19,7 @@ function UnfoldingText({reliability}) {
     }
     let content = reliability.content
     if (Array.isArray(reliability.content)) {
-        content = testArray(reliability.content)
+        content = listCreation(reliability.content)
     }
     return (
         <div className='unfoldingContainer'>

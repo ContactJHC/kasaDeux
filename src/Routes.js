@@ -20,10 +20,6 @@ export const routes =
           path: "fiche-logement/:id",
           element: <Location />,
         },
-        { 
-          path: "fiche-logement/*", 
-          element: <NotFound /> 
-        },
         {
           path: "apropos",
           element: <APropos />,

@@ -1,4 +1,5 @@
-import BannerTwo from "../../components/banners/BannerTwo";
+import Banner from '../../components/banners/Banner'
+import coverBan from '../../assets/coverBannerTwo.png'
 import UnfoldingText from "../../components/unfoldingText/UnfoldingText";
 
 function APropos() {
@@ -22,7 +23,7 @@ function APropos() {
     
     return (
         <>
-            <BannerTwo />
+            <Banner coverBanner={coverBan} />
             <UnfoldingText reliability={reliabilitySection} />
             <UnfoldingText reliability={respectSection} />
             <UnfoldingText reliability={serviceSection} />
