@@ -7,11 +7,8 @@ import './Carousel.css'
 function Carousel({picturesData}) {
     let [index, setIndex] = useState(0)
     const length = picturesData.length
-    // const [length, setLength] = useState(picturesData.length)
-    // useEffect(()=>{ setLength(picturesData.length)}, [picturesData])
 
     function nextSlide() {
-        // setLength(picturesData.length)
         if (index === length -1) {
             setIndex(0)
         } else {
@@ -20,7 +17,6 @@ function Carousel({picturesData}) {
     }
 
     function prevSlide() {
-        // setLength(picturesData.length)
         if (index === 0) {
             setIndex(length-1)
         } else {
@@ -49,14 +45,12 @@ function Carousel({picturesData}) {
                             minHeight: '415px'
                     }}>
                         </div>
-                    // <img src={picture} alt='photographie du logement' className='visiblePicture' />
                         
                     )}
                     </div>
                 )
             })}
             
-            {/* <img src={picturesData[0]} alt='test' className='visiblePicture' /> */}
         </section>
     )
 }
