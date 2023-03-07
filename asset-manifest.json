@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kasaDeux/static/css/main.63c70c82.css",
+    "main.js": "/kasaDeux/static/js/main.4306b134.js",
+    "static/media/coverBannerTwo.png": "/kasaDeux/static/media/coverBannerTwo.02e1c4f7498de1cb845b.png",
+    "static/media/coverBanner.png": "/kasaDeux/static/media/coverBanner.bacd9a6feeb9d00497fa.png",
+    "index.html": "/kasaDeux/index.html",
+    "main.63c70c82.css.map": "/kasaDeux/static/css/main.63c70c82.css.map",
+    "main.4306b134.js.map": "/kasaDeux/static/js/main.4306b134.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63c70c82.css",
+    "static/js/main.4306b134.js"
+  ]
+}
