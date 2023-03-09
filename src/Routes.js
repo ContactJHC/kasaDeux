@@ -17,6 +17,10 @@ export const routes =
             element: <Home /> 
         },
         {
+          path: "kasaDeux",
+          element: <Home />,
+        },
+        {
           path: "fiche-logement/:id",
           element: <Location />,
         },
